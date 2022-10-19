@@ -19,6 +19,9 @@ class TableViewController: UITableViewController {
     //            "菊池",
     //            "工藤",
     //        ]
+    
+        
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +39,7 @@ class TableViewController: UITableViewController {
         //"add"というキーで保存された値がなにかある -> 値をtaskArrayへ
         if userDefaults.object(forKey: "add") != nil {
             taskArray = userDefaults.object(forKey: "add") as! [String]
+ 
         }
         //tableViewを更新
         tableView.reloadData()
@@ -61,6 +65,48 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = taskArray[indexPath.row]
         return cell
     }
+    
+//削除機能追加
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            taskArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            UserDefaults.standard.set(taskArray, forKey: "add" )
+        }
+    }
+//削除機能ここまで
+    
+    
+//削除機能参考
+//        override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _,_,_  in
+//
+//                self.taskArray.remove(at: indexPath.row)
+//                self.tableView.deleteRows(at: [indexPath as IndexPath], with: .automatic)
+//                self.tableView.reloadData()
+//            }
+//
+//            return UISwipeActionsConfiguration(actions: [deleteAction])
+//        }
+
+    
+    
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+//    {
+//        return true
+//    }
+//
+//    //　※arrayNameは変数名に変更する
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//            taskArray.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+//        }
+//    }
+    
+
+
     
     /*
      // Override to support conditional editing of the table view.
