@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C8959AD28FBF5CD008BCACE /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddListViewController.swift; path = ../../AddListViewController.swift; sourceTree = "<group>"; };
+		7C8959AD28FBF5CD008BCACE /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddListViewController.swift; path = ../../../camp/swift/TableViewApp/TableViewApp/AddListViewController.swift; sourceTree = "<group>"; };
 		D2C428AB28FBDD4300687F2E /* TableViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C428AE28FBDD4300687F2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2C428B028FBDD4300687F2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
