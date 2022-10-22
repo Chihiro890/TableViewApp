@@ -151,7 +151,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="追加"/>
                                 <connections>
-                                    <action selector="addTask:" destination="bpB-GD-J9q" eventType="touchUpInside" id="chH-hh-RKI"/>
+                                    <action selector="addTask:" destination="bpB-GD-J9q" eventType="editingChanged" id="Ety-g5-YRC"/>
+                                    <action selector="addTask:" destination="bpB-GD-J9q" eventType="touchUpInside" id="h5W-9e-H28"/>
                                 </connections>
                             </button>
                         </subviews>
